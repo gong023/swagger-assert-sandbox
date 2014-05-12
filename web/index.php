@@ -34,6 +34,31 @@ $app->get('/plain', function () use ($app) {
     return $app->json($response);
 });
 
+/**
+ * @SWG\Resource(
+ *     resourcePath="nested",
+ *     @SWG\Api(
+ *         path="/nested",
+ *         description="nested api structure",
+ *         @SWG\Operation(
+ *             method="GET",type="NestedMember",nickname="nested"
+ *         )
+ *     )
+ * )
+ *
+ * @SWG\Model(
+ *     id="NestedMember",
+ *     @SWG\Property(name="id", type="integer", required=true, description="user id"),
+ *     @SWG\Property(name="name", type="string", required=true, description="user name"),
+ *     @SWG\Property(name="birth", type="Birth", required=true, description="birth day,month")
+ * )
+ *
+ * @SWG\Model(
+ *     id="Birth",
+ *     @SWG\Property(name="month", type="string", required=true, description="month"),
+ *     @SWG\Property(name="day", type="integer", required=true, description="day")
+ * )
+ */
 $app->get('/nested', function () use ($app) {
     $response = [
         'id'    => 0,
