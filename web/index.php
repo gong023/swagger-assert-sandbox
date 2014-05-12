@@ -151,4 +151,8 @@ $app->get('/parameter/{id}', function ($id) use ($app) {
     return $app->json($index[$id]);
 });
 
+$app->get('/swagger-ui', function () use ($app) {
+    return file_get_contents(__DIR__.'/../views/swagger-ui/index.html');
+});
+
 $app->run();
