@@ -72,6 +72,29 @@ $app->get('/nested', function () use ($app) {
     return $app->json($response);
 });
 
+/**
+ * @SWG\Resource(
+ *     resourcePath="collection",
+ *     @SWG\Api(
+ *         path="/collection",
+ *         description="nested api structure",
+ *         @SWG\Operation(
+ *             method="GET",type="CollectionMember",nickname="collection"
+ *         )
+ *     )
+ * )
+ *
+ * @SWG\Model(
+ *     id="CollectionMember",
+ *     @SWG\Property(
+ *          name="member collection",
+ *          type="array",
+ *          @SWG\Items("SimpleMember"),
+ *          required=true,
+ *          description="member array"
+ *      )
+ * )
+ */
 $app->get('/collection', function () use ($app) {
     $response = [
         [
