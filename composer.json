@@ -1,0 +1,14 @@
+{
+    "name": "gong023/swagger-assert-sandbox",
+    "description": "swagger assert sandbox",
+    "authors": [
+        {
+            "name": "gong023",
+            "email": "gon.gong.gone@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "silex/silex": "~1.1"
+    }
+}
