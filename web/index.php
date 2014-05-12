@@ -114,6 +114,24 @@ $app->get('/collection', function () use ($app) {
     return $app->json($response);
 });
 
+/**
+ * @SWG\Resource(
+ *     resourcePath="parameter",
+ *     @SWG\Api(
+ *         path="/parameter/{id}",
+ *         description="nested api structure",
+ *         @SWG\Operation(
+ *             method="GET",type="SimpleMember",nickname="nested",
+ *             @SWG\Parameters(
+ *                 @SWG\Parameter(
+ *                     name="id", paramType="path",type="string",
+ *                     required=true, description="specify member id"
+ *                 )
+ *             )
+ *         )
+ *     )
+ * )
+ */
 $app->get('/parameter/{id}', function ($id) use ($app) {
     $index = [
         [
