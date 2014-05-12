@@ -7,6 +7,24 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
+/**
+ * @SWG\Resource(
+ *     resourcePath="plain",
+ *     @SWG\Api(
+ *         path="/plain",
+ *         description="plain api structure",
+ *         @SWG\Operation(
+ *             method="GET",type="SimpleMember",nickname="plain"
+ *         )
+ *     )
+ * )
+ *
+ * @SWG\Model(
+ *     id="SimpleMember",
+ *     @SWG\Property(name="id", type="integer", required=true, description="user id"),
+ *     @SWG\Property(name="name", type="string", required=true, description="user name")
+ * )
+ */
 $app->get('/plain', function () use ($app) {
     $response = [
         'id'   => 0,
