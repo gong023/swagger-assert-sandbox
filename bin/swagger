@@ -1,0 +1,3 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+${DIR}/../vendor/bin/swagger ${DIR}/../web --default-base-path 'http://localhost:8080' -o ${DIR}/../web/data

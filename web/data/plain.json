@@ -1,0 +1,37 @@
+{
+    "basePath": "http://localhost:8080",
+    "swaggerVersion": "1.2",
+    "resourcePath": "plain",
+    "apis": [
+        {
+            "path": "/plain",
+            "description": "plain api structure",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "plain",
+                    "type": "SimpleMember"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "SimpleMember": {
+            "id": "SimpleMember",
+            "properties": {
+                "id": {
+                    "description": "user id",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "user name",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ]
+        }
+    }
+}

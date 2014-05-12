@@ -1,0 +1,59 @@
+{
+    "basePath": "http://localhost:8080",
+    "swaggerVersion": "1.2",
+    "resourcePath": "nested",
+    "apis": [
+        {
+            "path": "/nested",
+            "description": "nested api structure",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "nested",
+                    "type": "NestedMember"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "NestedMember": {
+            "id": "NestedMember",
+            "properties": {
+                "id": {
+                    "description": "user id",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "user name",
+                    "type": "string"
+                },
+                "birth": {
+                    "description": "birth day,month",
+                    "$ref": "Birth"
+                }
+            },
+            "required": [
+                "birth",
+                "id",
+                "name"
+            ]
+        },
+        "Birth": {
+            "id": "Birth",
+            "properties": {
+                "month": {
+                    "description": "month",
+                    "type": "string"
+                },
+                "day": {
+                    "description": "day",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "day",
+                "month"
+            ]
+        }
+    }
+}

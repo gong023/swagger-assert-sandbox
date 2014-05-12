@@ -1,0 +1,22 @@
+{
+    "apiVersion": null,
+    "swaggerVersion": "1.2",
+    "apis": [
+        {
+            "path": "/collection.json",
+            "description": "nested api structure"
+        },
+        {
+            "path": "/nested.json",
+            "description": "nested api structure"
+        },
+        {
+            "path": "/parameter.json",
+            "description": "nested api structure"
+        },
+        {
+            "path": "/plain.json",
+            "description": "plain api structure"
+        }
+    ]
+}

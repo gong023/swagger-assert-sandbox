@@ -1,0 +1,46 @@
+{
+    "basePath": "http://localhost:8080",
+    "swaggerVersion": "1.2",
+    "resourcePath": "parameter",
+    "apis": [
+        {
+            "path": "/parameter/{id}",
+            "description": "nested api structure",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "nested",
+                    "type": "SimpleMember",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "id",
+                            "type": "string",
+                            "required": true,
+                            "description": "specify member id"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": {
+        "SimpleMember": {
+            "id": "SimpleMember",
+            "properties": {
+                "id": {
+                    "description": "user id",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "user name",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ]
+        }
+    }
+}

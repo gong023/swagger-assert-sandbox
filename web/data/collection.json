@@ -1,0 +1,52 @@
+{
+    "basePath": "http://localhost:8080",
+    "swaggerVersion": "1.2",
+    "resourcePath": "collection",
+    "apis": [
+        {
+            "path": "/collection",
+            "description": "nested api structure",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "collection",
+                    "type": "CollectionMember"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "CollectionMember": {
+            "id": "CollectionMember",
+            "properties": {
+                "member collection": {
+                    "description": "member array",
+                    "type": "array",
+                    "items": {
+                        "$ref": "SimpleMember"
+                    }
+                }
+            },
+            "required": [
+                "member collection"
+            ]
+        },
+        "SimpleMember": {
+            "id": "SimpleMember",
+            "properties": {
+                "id": {
+                    "description": "user id",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "user name",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ]
+        }
+    }
+}
